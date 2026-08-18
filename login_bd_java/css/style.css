@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9ecb 0%, #c084fc 45%, #7dd3fc 100%);
+  background-size: 200% 200%;
+  animation: fondoAnimado 10s ease infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes fondoAnimado {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estrellitas flotando de fondo, estilo anime */
+body::before,
+body::after {
+  content: "✦ ✧ ⋆ ✦ ✧ ⋆ ✦ ✧ ⋆ ✦ ✧";
+  position: fixed;
+  left: 0;
+  width: 100%;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 40px;
+  pointer-events: none;
+}
+
+body::before { top: 8%; }
+body::after  { bottom: 10%; }
+
+.contenedor {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.tarjeta {
+  max-width: 380px;
+  margin: 0 auto;
+  background: #fffaff;
+  border-radius: 28px;
+  padding: 36px 30px;
+  text-align: center;
+  border: 3px solid #ffffff;
+  box-shadow:
+    0 0 0 4px #f472b6,
+    0 15px 35px rgba(124, 58, 237, 0.35);
+  position: relative;
+}
+
+/* "orejitas" decorativas arriba de la tarjeta */
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 32px;
+  width: 26px;
+  height: 26px;
+  background: #f472b6;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.tarjeta::after {
+  content: "✨";
+  position: absolute;
+  top: -22px;
+  right: 22px;
+  font-size: 26px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-family: 'Baloo 2', 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitulo {
+  margin: 0 0 22px;
+  color: #9d7bb0;
+  font-size: 13.5px;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid #f3d9ec;
+  border-radius: 14px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  background: #fdf4ff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input::placeholder {
+  color: #c9a6d6;
+}
+
+input:focus {
+  border-color: #ec4899;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.15);
+}
+
+.boton {
+  display: inline-block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 13px;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(139, 92, 246, 0.5);
+}
+
+.boton:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.mensaje {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 18px;
+}
+
+.mensaje.error {
+  color: #e11d48;
+}
+
+.mensaje.exito {
+  color: #16a34a;
+}
+
+.pista {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #b98ac9;
+}
+
+.pista strong {
+  color: #8b5cf6;
+}

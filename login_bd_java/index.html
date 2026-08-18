@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="tarjeta">
+      <h1>Iniciar sesion</h1>
+      <p class="subtitulo">Ingresa tus credenciales para continuar</p>
+
+      <form id="formLogin" autocomplete="off">
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo" name="correo" placeholder="usuario@correo.cl" required>
+
+        <label for="password">Contrasena</label>
+        <input type="password" id="password" name="password" placeholder="********" required>
+
+        <button type="submit" class="boton">Ingresar</button>
+      </form>
+
+      <p id="mensaje" class="mensaje"></p>
+
+      <p class="pista">Prueba con: <strong>admin@demo.cl</strong> / <strong>admin123</strong></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
