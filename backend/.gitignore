@@ -1,0 +1,4 @@
+config.properties
+lib/*.jar
+out/
+*.class
